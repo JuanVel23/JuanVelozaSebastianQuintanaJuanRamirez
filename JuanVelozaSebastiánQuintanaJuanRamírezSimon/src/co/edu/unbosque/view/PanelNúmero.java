@@ -11,6 +11,8 @@ public class PanelNúmero extends JPanel {
 	private static final long serialVersionUID = 1L;
 	private JLabel lab;
 	private JTextField txtnum;
+	private JButton botgen;
+	public static final String GENERAR = "Generar";
 	
 	public PanelNúmero() {
 		
@@ -22,11 +24,13 @@ public class PanelNúmero extends JPanel {
 		txtnum = new JTextField("");
 		txtnum.setForeground(Color.black);
 		txtnum.setBackground(Color.white);
+		botgen = new JButton("Generar");
+		botgen.setActionCommand(GENERAR);
 		
 		add(lab);
 		add(txtnum);
 		add(new JLabel());
-		add(new JLabel());
+		add(botgen);
 		
 	}
 
@@ -44,6 +48,14 @@ public class PanelNúmero extends JPanel {
 
 	public void setTxtnum(JTextField txtnum) {
 		this.txtnum = txtnum;
+	}
+
+	public JButton getBotgen() {
+		return botgen;
+	}
+
+	public void setBotgen(JButton botgen) {
+		this.botgen = botgen;
 	}
 	
 	

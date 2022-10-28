@@ -38,5 +38,38 @@ public class View extends JFrame {
 		pt.getBot3().addActionListener(control);
 		pt.getBot4().addActionListener(control);
 		pb.getBotter().addActionListener(control);
+		pn.getBotgen().addActionListener(control);
 	}
+
+
+	public PanelNúmero getPn() {
+		return pn;
+	}
+
+
+	public void setPn(PanelNúmero pn) {
+		this.pn = pn;
+	}
+
+
+	public PanelTeclado getPt() {
+		return pt;
+	}
+
+
+	public void setPt(PanelTeclado pt) {
+		this.pt = pt;
+	}
+
+
+	public PanelBoton getPb() {
+		return pb;
+	}
+
+
+	public void setPb(PanelBoton pb) {
+		this.pb = pb;
+	}
+	
+	
 }

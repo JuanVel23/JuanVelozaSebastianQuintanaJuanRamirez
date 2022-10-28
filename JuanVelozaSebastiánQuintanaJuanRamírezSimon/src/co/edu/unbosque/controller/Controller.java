@@ -19,8 +19,10 @@ public class Controller implements ActionListener{
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+	public void actionPerformed(ActionEvent evento) {
 		
+		if(evento.getActionCommand().equals(gui.getPn().GENERAR)) {
+			gui.getPn().getTxtnum().setText(sm.generarNumero());
+		}
 	}
 }
