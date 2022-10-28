@@ -1,6 +1,10 @@
 package co.edu.unbosque.view;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.swing.*;
 
@@ -11,12 +15,14 @@ public class View extends JFrame {
 	private PanelNúmero pn;
 	private PanelTeclado pt;
 	private PanelBoton pb;
+	private Timer timer;
 	private static final long serialVersionUID = 1L;
 
 	
 	public View (Controller control) {
 		
-		setSize(700, 600);
+		
+		setSize(700, 700);
 		setResizable(false);
 		setTitle("Simon");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -41,6 +47,23 @@ public class View extends JFrame {
 		pn.getBotgen().addActionListener(control);
 	}
 
+	public void borrarNumeros() {
+		Timer timer = new Timer();
+		TimerTask tarea = new TimerTask() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				pn.getTxtnum1().setForeground(Color.white);
+				pn.getTxtnum2().setForeground(Color.white);
+				pn.getTxtnum3().setForeground(Color.white);
+				pn.getTxtnum4().setForeground(Color.white);
+			}
+		};
+		
+		timer.schedule(tarea, 1500);
+	}	
+	
 
 	public PanelNúmero getPn() {
 		return pn;
@@ -69,6 +92,16 @@ public class View extends JFrame {
 
 	public void setPb(PanelBoton pb) {
 		this.pb = pb;
+	}
+
+
+	public Timer getTimer() {
+		return timer;
+	}
+
+
+	public void setTimer(Timer timer) {
+		this.timer = timer;
 	}
 	
 	
