@@ -3,6 +3,7 @@ package co.edu.unbosque.model;
 public class Simon {
 	
 	private NumeroGenerado numgen;
+
 	
 	public Simon() {
 		numgen = new NumeroGenerado();
@@ -15,7 +16,5 @@ public class Simon {
 	public void setNumgen(NumeroGenerado numgen) {
 		this.numgen = numgen;
 	}
-	
-	
-	
+
 }

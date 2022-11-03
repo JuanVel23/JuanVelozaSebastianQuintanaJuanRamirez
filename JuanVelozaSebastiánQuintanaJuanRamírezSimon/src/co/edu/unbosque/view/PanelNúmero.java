@@ -1,6 +1,7 @@
 package co.edu.unbosque.view;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridLayout;
 
 import javax.swing.*;
@@ -15,25 +16,37 @@ public class PanelNúmero extends JPanel {
 	public static final String GENERAR = "Generar";
 	
 	public PanelNúmero() {
-		
+
 		setLayout (new GridLayout(2,5));
 		TitledBorder border = BorderFactory.createTitledBorder("Numero");
 		border.setTitleColor(Color.BLACK);
 		setBorder( border );
+		Font text = new Font("Arial",1,20 );
 		lab = new JLabel("Numero Generado: ");
 		txtnum1 = new JTextField("");
 		txtnum1.setForeground(Color.black);
 		txtnum1.setBackground(Color.white);
-
+		txtnum1.setFont(text);
+		txtnum1.disable();
+		txtnum1.setHorizontalAlignment(SwingConstants.CENTER);
 		txtnum2 = new JTextField("");
 		txtnum2.setForeground(Color.black);
 		txtnum2.setBackground(Color.white);
+		txtnum2.setFont(text);
+		txtnum2.disable();
+		txtnum2.setHorizontalAlignment(SwingConstants.CENTER);
 		txtnum3 = new JTextField("");
 		txtnum3.setForeground(Color.black);
 		txtnum3.setBackground(Color.white);
+		txtnum3.setFont(text);
+		txtnum3.disable();
+		txtnum3.setHorizontalAlignment(SwingConstants.CENTER);
 		txtnum4 = new JTextField("");
 		txtnum4.setForeground(Color.black);
 		txtnum4.setBackground(Color.white);
+		txtnum4.setFont(text);
+		txtnum4.disable();
+		txtnum4.setHorizontalAlignment(SwingConstants.CENTER);
 		botgen = new JButton("Generar");
 		botgen.setActionCommand(GENERAR);
 		

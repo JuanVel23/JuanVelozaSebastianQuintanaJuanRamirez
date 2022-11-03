@@ -12,14 +12,15 @@ public class PanelBoton extends JPanel {
 	public static final String TERMINAR = "Terminar";
 	
 	public PanelBoton(){
-		setLayout(new GridLayout(1,3));
+		setLayout(new GridLayout(1,8));
 		botter = new JButton("Terminar");
 		botter.setActionCommand(TERMINAR);
 		num1 = new JTextField("");
 		num2 = new JTextField("");
 		num3 = new JTextField("");
 		num4 = new JTextField("");
-		
+		botter.setVisible(false);
+
 		add(new JLabel());
 		add(botter);
 		add(new JLabel());
@@ -64,6 +65,6 @@ public class PanelBoton extends JPanel {
 	public void setNum4(JTextField num4) {
 		this.num4 = num4;
 	}
-	
+
 	
 }

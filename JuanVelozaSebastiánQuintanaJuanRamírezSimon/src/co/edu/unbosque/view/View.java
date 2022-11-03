@@ -47,6 +47,12 @@ public class View extends JFrame {
 		pn.getBotgen().addActionListener(control);
 	}
 
+	public void devolverInformacionAcierto(String mensaje) {
+		JOptionPane.showMessageDialog(pn, mensaje, "Felicidades", JOptionPane.CLOSED_OPTION);
+	}
+	public void devolverInformacionError(String mensaje) {
+		JOptionPane.showMessageDialog(pb, mensaje, null, JOptionPane.OK_OPTION);
+	}
 	public void borrarNumeros() {
 		Timer timer = new Timer();
 		TimerTask tarea = new TimerTask() {
@@ -54,10 +60,11 @@ public class View extends JFrame {
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
-				pn.getTxtnum1().setForeground(Color.white);
-				pn.getTxtnum2().setForeground(Color.white);
-				pn.getTxtnum3().setForeground(Color.white);
-				pn.getTxtnum4().setForeground(Color.white);
+				pn.getTxtnum1().setVisible(false);
+				pn.getTxtnum2().setVisible(false);
+				pn.getTxtnum3().setVisible(false);
+				pn.getTxtnum4().setVisible(false);
+	
 			}
 		};
 		
