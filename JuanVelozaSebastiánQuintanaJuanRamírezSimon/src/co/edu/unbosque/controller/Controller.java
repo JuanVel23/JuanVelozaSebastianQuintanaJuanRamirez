@@ -14,13 +14,11 @@ public class Controller implements ActionListener{
 	private View gui;
 	private Simon sm;
 	private int i;
-	private int j;
 	
 	public Controller () {
 		gui = new View(this);
 		sm = new Simon();
 		this.i = 0;
-		this.j = 2;
 		gui.setVisible(true);
 	}
 
