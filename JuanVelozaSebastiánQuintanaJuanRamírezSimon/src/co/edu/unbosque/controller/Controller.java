@@ -112,7 +112,7 @@ public class Controller implements ActionListener{
 				gui.devolverInformacionAcierto("!!Secuencia exitosa!! :D");
 				System.exit(0);
 			}else {
-				gui.devolverInformacionError("Pero para que te traje");
+				gui.devolverInformacionError("Pero para que te traje :(");
 				System.exit(0);
 		}
 }		

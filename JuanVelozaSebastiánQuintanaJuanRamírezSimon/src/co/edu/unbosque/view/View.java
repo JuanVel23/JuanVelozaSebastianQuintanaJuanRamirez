@@ -51,7 +51,7 @@ public class View extends JFrame {
 		JOptionPane.showMessageDialog(pn, mensaje, "Felicidades", JOptionPane.CLOSED_OPTION);
 	}
 	public void devolverInformacionError(String mensaje) {
-		JOptionPane.showMessageDialog(pb, mensaje, null, JOptionPane.OK_OPTION);
+		JOptionPane.showMessageDialog(pb, mensaje, "Perdiste", JOptionPane.OK_OPTION);
 	}
 	public void borrarNumeros() {
 		Timer timer = new Timer();
